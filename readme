@@ -1,0 +1,22 @@
+%   
+%   Computes any sliding window with a chosen input function
+% 
+%   Usage:    out = rs_winfun( data, cfg)
+%   
+%   data - first dimension is the one you slide through (usually time)
+% 
+%   cfg - structure with the following fields: 
+% 
+%        ** essential **
+%          fs - sampling rate of data (Hz)
+%          win - sliding window dimensions in seconds: [timeBefore timeAfter]
+%          func - handle of function to be applied, e.g. @mean
+% 
+%        ** optional **
+%          func_params - parameters for the function as a cell array
+%          toi - sample numbers to compute value for in first dimension of data (if empty computes for all timepoints)
+%          edge_mode - 'exclude' - ignore edge values which do not have a complete window (default)
+%                      'include' - compute these values anyway with limited values in the window
+%          verbosity - 'quiet'   - use evalc to supress command window output of the function
+%                      'verbose' - just use feval (maybe more efficient)
+% 
