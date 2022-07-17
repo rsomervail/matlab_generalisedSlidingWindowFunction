@@ -19,7 +19,9 @@
 %                      'include' - compute these values anyway with limited values in the window
 %          verbosity - 'quiet'   - use evalc to supress command window output of the function
 %                      'verbose' - just use feval (maybe more efficient)
-% 
+%
+%
+%   Richard Somervail, 17/07/2022
 %% 
 function out = rs_winfun( data, cfg)
 
